@@ -20,7 +20,7 @@ class ReadOnlyConfig {
 		SaveToConfig('Database.User', $config->getDbUser(),FALSE);
 		SaveToConfig('Database.Password', $config->getDbPassword(),FALSE);
 		SaveToConfig('Garden.Errors.MasterView', 
-			($config->getLocation() == 'localhost' || $config->getLocation() == 'dev') ? 'deverror.master.php' : 'error.master.php');
+			($config->getLocation() == 'local' || $config->getLocation() == 'dev') ? 'deverror.master.php' : 'error.master.php');
 	}
 
 }
